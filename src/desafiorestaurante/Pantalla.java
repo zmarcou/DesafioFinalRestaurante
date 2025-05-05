@@ -26,10 +26,14 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+
+        jDialog1.setMinimumSize(new java.awt.Dimension(1300, 1300));
+        jDialog1.setPreferredSize(new java.awt.Dimension(1300, 1300));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,7 +86,9 @@ public class Pantalla extends javax.swing.JFrame {
             if (c.getNombre().equals(nombreLogin) && c.getContraseña().equals(contrasenaLogin)) {
             JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. ¡Bienvenido " + c.getNombre() + "!");
             encontrado = true;
-            break;
+            jDialog1.setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(null, "Usuario NO encontrado");
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -125,6 +131,7 @@ public class Pantalla extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
