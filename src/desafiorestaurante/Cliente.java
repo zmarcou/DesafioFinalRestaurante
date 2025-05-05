@@ -11,8 +11,13 @@ package desafiorestaurante;
 public class Cliente {
     private int id;
     private String nombre;
+    private String contraseña;
     
-    public Cliente(){}
+    public Cliente(String nombre, String contraseña){
+        this.nombre = nombre;
+        this.contraseña = contraseña;
+    
+    }
 
     /**
      * @return the id
@@ -40,6 +45,20 @@ public class Cliente {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    /**
+     * @return the contraseña
+     */
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    /**
+     * @param contraseña the contraseña to set
+     */
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
     
 }
